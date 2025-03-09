@@ -36,15 +36,6 @@ services:
       - ./local-files:/data/files
       - ./python_scripts:/data/py_scripts
       - ./requirements.txt:/data/requirements.txt
-    networks:
-      - auto-reverse-proxy-global-network
-      - postgres_service-network
 
 volumes:
   data:
-
-networks:
-  auto-reverse-proxy-global-network:
-    external: true
-  postgres_service-network:
-    external: true
